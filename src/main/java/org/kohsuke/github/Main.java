@@ -25,6 +25,7 @@ public class Main {
     
     try {
       
+    	
       connection = Connector.newConnection(config);
       
       // display some current settings
