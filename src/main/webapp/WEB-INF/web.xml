@@ -20,25 +20,18 @@
 	<listener>
 	    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>    
- 
 
-
-
-     
     <servlet>
-        <servlet-name>Register</servlet-name>
+        <servlet-name>spring</servlet-name>
         <servlet-class>
-            servlet.Register
+            org.springframework.web.servlet.DispatcherServlet
         </servlet-class>
-        
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value><!-- no servlet context, will only delegate to the parent context  --></param-value>
+        </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
-    
-    <servlet-mapping>
-        <servlet-name>Register</servlet-name>
-        <url-pattern>/Register</url-pattern>
-    </servlet-mapping>
-    
     <servlet-mapping>
         <servlet-name>spring</servlet-name>
         <url-pattern>/</url-pattern>
