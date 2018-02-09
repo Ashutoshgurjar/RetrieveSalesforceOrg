@@ -24,34 +24,19 @@
 
 
 
-
-    <servlet>
-        <servlet-name>spring</servlet-name>
-        <servlet-class>
-            org.springframework.web.servlet.DispatcherServlet
-        </servlet-class>
-        <init-param>
-            <param-name>contextConfigLocation</param-name>
-            <param-value><!-- no servlet context, will only delegate to the parent context  --></param-value>
-        </init-param>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
      
     <servlet>
-        <servlet-name>Register-servlet</servlet-name>
+        <servlet-name>Register</servlet-name>
         <servlet-class>
-            org.springframework.web.servlet.DispatcherServlet
+            servlet.Register
         </servlet-class>
-        <init-param>
-            <param-name>contextConfigLocation</param-name>
-            <param-value><!-- no servlet context, will only delegate to the parent context  --></param-value>
-        </init-param>
+        
         <load-on-startup>1</load-on-startup>
     </servlet>
     
     <servlet-mapping>
-        <servlet-name>Register-servlet</servlet-name>
-        <url-pattern>/Register/*</url-pattern>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/Register</url-pattern>
     </servlet-mapping>
     
     <servlet-mapping>

@@ -20,7 +20,7 @@ import com.sforce.ws.ConnectorConfig;
 import com.sforce.soap.metadata.RetrieveResult;
 import com.sforce.soap.enterprise.sobject.*;
 
-@WebServlet (value = "/Register", urlPatterns = { "/Register/*", "/Register" })
+//@WebServlet (value = "/Register", urlPatterns = { "/Register/*", "/Register" })
 public class Register extends HttpServlet {
 	
 	static EnterpriseConnection connection;
