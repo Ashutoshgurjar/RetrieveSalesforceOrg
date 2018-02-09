@@ -1,0 +1,12 @@
+org\kohsuke\github\NewTestClass.class
+org\kohsuke\github\OrgBackupController.class
+org\kohsuke\github\RetrieveSample.class
+org\kohsuke\github\SFLoginUtility.class
+org\kohsuke\github\DescribeMetadataUtility.class
+org\kohsuke\github\MetadataWrapper.class
+org\kohsuke\github\PackageController.class
+org\kohsuke\github\Utility.class
+org\kohsuke\github\Main.class
+org\kohsuke\github\RetrieveMetadataUtilitySample.class
+org\kohsuke\github\Register.class
+org\kohsuke\github\MetaDataUtility.class
