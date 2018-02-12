@@ -20,7 +20,7 @@ import com.sforce.ws.ConnectorConfig;
 import com.sforce.soap.metadata.RetrieveResult;
 import com.sforce.soap.enterprise.sobject.*;
 
-//@WebServlet (value = "/Register", urlPatterns = { "/Register/*", "/Register" })
+//@WebServlet (value = "/Register",urlPatterns = { "/Register/*", "/Register" })
 public class Register extends HttpServlet {
 	
 	static EnterpriseConnection connection;
@@ -28,10 +28,10 @@ public class Register extends HttpServlet {
 	public static String PASSWORD;
 	public static String ENVIRONMENT;
 	public static String RELEASE;
-	public void doGet(HttpServletRequest request, HttpServletResponse response)  
+	public void startProcessing(HttpServletRequest request, HttpServletResponse response)  
             throws ServletException, IOException {  
 		
-		System.out.println("request:::::" + request.getQueryString());
+		/*System.out.println("request:::::" + request.getQueryString());
 		USERNAME = request.getParameter("userName");
 		PASSWORD = request.getParameter("password");
 		ENVIRONMENT = request.getParameter("environment");
@@ -39,26 +39,27 @@ public class Register extends HttpServlet {
 		System.out.println("UserName  "+ USERNAME);
 		System.out.println("userPass  "+ PASSWORD);
 		System.out.println("Environment" + ENVIRONMENT);
-		System.out.println("RELEASE  "+ RELEASE);
+		System.out.println("RELEASE  "+ RELEASE);*/
 		try{
-			System.out.println("Check Dynamic Path ::: " + getServletContext().getRealPath("/"));
+			/*System.out.println("Check Dynamic Path ::: " + getServletContext().getRealPath("/"));
 	    	  String arr[] = new String[6];
 	    	  arr[0] = getServletContext().getRealPath("/");
 	    	  arr[1] = "Test1";
 	    	  arr[2] = USERNAME; 
 	    	  arr[3] = PASSWORD;
 	    	  arr[4] = ENVIRONMENT;
-	    	  arr[5] = RELEASE;
+	    	  arr[5] = RELEASE;*/
 	    	  //RetrieveSample.requestS = request;
 	    	 // RetrieveSample.main(arr);
-	    	   
-	    	  MetaDataUtility.appPath = getServletContext().getRealPath("/");
+	    	   System.out.println("stage1");
 	    	  
+	    	  MetaDataUtility.appPath = request.getServletContext().getRealPath("/");
+	    	  System.out.println("stage2"+MetaDataUtility.appPath);
 	    	  //DescribeMetadataUtility xyz = new DescribeMetadataUtility("rajeev.jain@simplyforce.com.automation", "Raj.jain@2026", "https://test.salesforce.com/services/Soap/c/39.0");
 	    	  OrgBackupController abc = new OrgBackupController("rajeev.jain@simplyforce.com.automation", "Raj.jain@2026", "sandbox");
-		      
+	    	  System.out.println("stage3");
 	      }catch(Exception excp){excp.printStackTrace();}
-		
+		System.out.println("stage4");
 		String text = "some text";
 		response.setContentType("text/plain");  // Set content type of the response so that jQuery knows what it can expect.
 	    response.setCharacterEncoding("UTF-8"); // You want world domination, huh?
@@ -66,7 +67,7 @@ public class Register extends HttpServlet {
 	   
 	}
 		
-	public void doPost(HttpServletRequest request, HttpServletResponse response)  
+	/*public void doPost(HttpServletRequest request, HttpServletResponse response)  
 	            throws ServletException, IOException {  
 	  
 		response.setContentType("text/html");  
@@ -92,7 +93,7 @@ public class Register extends HttpServlet {
 		      
 	      }catch(Exception excp){excp.printStackTrace();}
 	   
-	}
+	}*/
 	
 	
 	// queries and displays the 5 newest contacts

@@ -29,7 +29,9 @@ public class PackageController {
 	@RequestMapping(value = "/retrieveOrgBackupx", method = RequestMethod.GET)
 	public void retrieveOrgBackupStart(HttpServletRequest request, HttpServletResponse response) throws Exception{
 		Register reg = new Register();
-		reg.doGet(request, response);
+		
+		
+		reg.startProcessing(request, response);
 	}
 	
 }
